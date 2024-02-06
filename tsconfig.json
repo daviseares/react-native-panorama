@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react-native",
+    "lib": ["esnext", "dom"],
+    "outDir": "./dist",
+    "declaration": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/__tests__/*", "example"]
+}
