@@ -2,7 +2,7 @@
 
 > The react-native-panorama library is a direct continuation of the [@lightbase/react-native-panorama-view module](https://github.com/lightbasenl/react-native-panorama-view). It's a way of continue the panoramic view integration in React Native since @lightbase/react-native-panorama-view has no more updates. 
 
-<img src="./github/preview.gif" />
+<img src=".github/preview.gif" width="30%" />
 
 ## Mostly automatic installation (RN >= 0.60)
 
