@@ -1,5 +1,5 @@
 import React from 'react';
-import {PanoramaView} from '@lightbase/react-native-panorama-view';
+import {PanoramaView} from '@dsdev/react-native-panorama';
 import {View, Dimensions, StyleSheet} from 'react-native';
 
 const App = () => (

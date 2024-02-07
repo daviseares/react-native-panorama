@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@lightbase/react-native-panorama-view": "file:../",
+    "@dsdev/react-native-panorama": "file:../",
     "react": "16.11.0",
     "react-native": "0.62.2"
   },
