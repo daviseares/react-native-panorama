@@ -863,7 +863,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@lightbase/eslint-config-lightbase@^2.14.0":
+"@lightbase/eslint-config-lightbase@2.14.0":
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/@lightbase/eslint-config-lightbase/-/eslint-config-lightbase-2.14.0.tgz#6bb7a327ba55688dd709960554527d13d985f685"
   integrity sha512-SIb7TOCBO9TliRpVBmgaMZQ7WcxiO3lwDN5O1ogxbXFtVbyvcze0HOA3lMZYbft0+spDV+O0C//C3kr791v2pQ==

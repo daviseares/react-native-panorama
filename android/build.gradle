@@ -20,9 +20,6 @@ android {
 }
 
 repositories{
-    flatDir {
-      dirs 'libs'
-    }
     mavenCentral()
     google()
 }
@@ -31,9 +28,9 @@ dependencies {
     implementation 'com.facebook.react:react-native:+'
     // Panorama
     implementation "androidx.annotation:annotation:1.1.0"
-    implementation files ('libs/sdk-base-1.180.0.aar')
-    implementation files ('libs/sdk-common-1.180.0.aar')
-    implementation files ('libs/sdk-commonwidget-1.180.0.aar')
-    implementation files ('libs/sdk-panowidget-1.180.0.aar')
+    implementation 'com.google.vr:sdk-base:1.180.0'
+    implementation 'com.google.vr:sdk-common:1.180.0'
+    implementation 'com.google.vr:sdk-commonwidget:1.180.0'
+    implementation 'com.google.vr:sdk-panowidget:1.180.0'
     implementation 'commons-io:commons-io:2.5'
 }
