@@ -61,9 +61,7 @@ public class PanoramaView extends VrPanoramaView implements LifecycleEventListen
 
 
     public void setImageSource(String value) {
-        //Log.i(LOG_TAG, "Image source: " + value);
-
-        if(value == null){
+        if (value == null) {
             return;
         }
 
@@ -78,9 +76,23 @@ public class PanoramaView extends VrPanoramaView implements LifecycleEventListen
                 imageLoaderTask.cancel(true);
             }
 
-            imageLoaderTask = new ImageLoaderTask();
-            imageLoaderTask.execute(Pair.create(imageUrl, _options));
-
+            // Check if the URL is a data URL
+            if (imageUrl.startsWith("data:")) {
+                // Extract the base64 string from the data URL
+                String base64String = imageUrl.substring(imageUrl.indexOf(",") + 1);
+                // Decode the base64 string to obtain the image data
+                byte[] imageData = android.util.Base64.decode(base64String, android.util.Base64.DEFAULT);
+                // Create a Bitmap from the image data
+                image = BitmapFactory.decodeByteArray(imageData, 0, imageData.length);
+                // Notify the component that the image is loaded
+                emitEvent("onImageDownloaded", null);
+                // Load the image into the panorama view
+                loadImageFromBitmap(image, _options);
+            } else {
+                // Proceed with loading image from file or URL as before
+                imageLoaderTask = new ImageLoaderTask();
+                imageLoaderTask.execute(Pair.create(imageUrl, _options));
+            }
         } catch (Exception e) {
             emitImageLoadingFailed(e.toString());
         }
